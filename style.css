@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+
+/* bài tập nhập điểm đậu rớt */
+
+/*  chỉnh nút inout radio của vùng khu vực ưu tiên */
+
+.exercise-1 .area-special li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+

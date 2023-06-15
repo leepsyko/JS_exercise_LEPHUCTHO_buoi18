@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous">
+
+
+    <!-- MY css  -->
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+
+  <body>
+
+
+    <div class="exercise-1 d-grid my-5 text-center">
+      <h1>Tra cứu điểm tuyển sinh </h1>
+      <div class="row">
+        <div class="col">
+          <label for="input-math">Nhập điểm toán</label>
+          <br>
+          <input type="text" id="input-math">
+        </div>
+        <div class="col">
+          <label for="input-physical">Nhập điểm lý</label>
+          <br>
+          <input type="text" id="input-physical">
+        </div>
+        <div class="col">
+          <label for="input-chem">Nhập điểm hoá</label>
+          <br>
+          <input type="text" id="input-chem">
+        </div>
+      </div>
+      <div class="area-special my-2">
+
+        <div class="row">
+          <div class="col">
+            <h5>Chọn khu vực ưu tiên cho thí sinh</h5>
+            <ul class="list-unstyled">
+              <li class="type">
+                <input type="radio" name="selector1" id="area-A">
+                <label for="area-A">A</label>
+
+              </li>
+
+              <li class="type">
+                <input type="radio" name="selector1" id="area-B">
+                <label for="area-B">B</label>
+
+              </li>
+
+              <li class="type">
+                <input type="radio" name="selector1" id="area-C">
+                <label for="area-C">C</label>
+
+              </li>
+              <li class="type">
+                <input type="radio" name="selector1" id="area-X">
+                <label for="area-X">X</label>
+
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Chọn đối tượng ưu tiên</h5>
+            <ul class="list-unstyled">
+              <li class="type">
+                <input type="radio" name="selector2" id="person-1">
+                <label for="person-1">1</label>
+
+              </li>
+
+              <li class="type">
+                <input type="radio" name="selector2" id="person-2">
+                <label for="person-2">2</label>
+
+              </li>
+
+              <li class="type">
+                <input type="radio" name="selector2" id="person-3">
+                <label for="person-3">3</label>
+
+              </li>
+              <li class="type">
+                <input type="radio" name="selector2" id="person-x">
+                <label for="person-x">0</label>
+
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <label for="input-standar">Nhập điểm chuẩn</label>
+            <br>
+            <input type="text" id="input-standar">
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-danger w-50 mx-auto my-3" onclick="show()">Kết
+        Quả
+      </button>
+      <div id="showResult" class="p-3 w-25 mx-auto text-center bg-success"></div>
+    </div>
+
+
+
+
+
+
+
+    <script src="./index.js"></script>
+
+  </body>
+
+</html>
