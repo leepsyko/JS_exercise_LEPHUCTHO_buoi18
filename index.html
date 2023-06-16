@@ -22,8 +22,7 @@
   </head>
 
   <body>
-
-
+    <!-- Tra cứu kết quả kì thi -->
     <div class="exercise-1 d-grid my-5 text-center">
       <h1>Tra cứu điểm tuyển sinh </h1>
       <div class="row">
@@ -114,8 +113,72 @@
     </div>
 
 
-    
+    <!-- Tính tiền điện của bạn  -->
+    <div class="form-control w-50 mx-auto d-grid ">
+      <h1> Hoá đơn tiền điện của tháng này</h1>
+      <div class="row">
+        <div class="col w-100">
+          <label for="input-NameEnergy" class="d-block">Tên chủ căn hộ:</label>
+          <input type="text" id="input-NameEnergy">
+          <label for="input-numberEnergy" class="d-block">Nhập số kw điện của
+            bạn </label>
+          <input type="text" name="" id="input-numberEnergy">
+          <button class="btn btn-primary d-block my-2" onclick="calEnergy()"> Số
+            tiền phải trả</button>
+        </div>
+        <div class="col border m-2">
+          <h4>Hoá đơn tiền điện tháng này</h4>
+          <div id="output-NameEnergy"></div>
 
+        </div>
+      </div>
+    </div>
+
+
+    <!-- tính thuế  -->
+    <div class="form-control w-75 mx-auto d-grid mt-5 ">
+      <h1 class="text-center"> Truy Thu Thuế Thu Nhập Cá Nhân</h1>
+      <div class="row">
+        <div class="col w-100">
+          <label for="input-wages" class="d-block">Thu nhập cá nhân:</label>
+          <input type="text" id="input-wages">
+          <label for="input-people" class="d-block">Nhập số người phụ thuộc:</label>
+          <input type="text" name="" id="input-people">
+          <button class="btn btn-primary d-block my-2" onclick="showDemo()"> Số
+            tiền phải trả</button>
+        </div>
+        <div class="col border m-2">
+          <h4>Tiền Thuế Phải Đóng</h4>
+          <div id="output-tax"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--  tính tiền cáp -->
+
+    <div class="form-control w-75 mx-auto d-grid mt-5 ">
+      <h1 class="text-center"> Truy Thu Thuế Thu Nhập Cá Nhân</h1>
+      <label for="typeCustomer"> Chọn loại khách hàng</label>
+      <select name="" id="typeCustomer" onchange="changeSelection()">
+        <option value=""></option>
+        <option value="business">Doanh Nghiệp</option>
+        <option value="person">Cá Nhân</option>
+      </select>
+      <div id="input-connect" style="display: none;">
+        <label for="enterConnect"> Nhập Số kết nói</label>
+        <input type="number" id="enterConnect" class="d-block">
+      </div>
+      <label for="enterVip">Số Kênh Cao Cấp</label>
+      <input type="number" name="" id="enterVip">
+      <button class="btn btn-primary d-block my-2" onclick="showDemo()"> Số
+        tiền phải trả</button>
+      <div class="ps-2 border m-2">
+        <h4>Tiền Phải Trả</h4>
+        <div id="output-tax"></div>
+
+      </div>
+    </div>
 
 
 
