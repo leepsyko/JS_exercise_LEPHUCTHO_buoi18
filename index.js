@@ -113,7 +113,7 @@ function calTax(income, people) {
       60e6 * 0.1 +
       90e6 * 0.15 +
       174e6 * 0.2 +
-      240 * 0.25 +
+      240e6 * 0.25 +
       (taxIncome - 624e6) * 0.3;
   } else {
     taxPay +=
@@ -121,7 +121,7 @@ function calTax(income, people) {
       60e6 * 0.1 +
       90e6 * 0.15 +
       174e6 * 0.2 +
-      240 * 0.25 +
+      240e6 * 0.25 +
       336e6 * 0.3 +
       (taxIncome - 624e6) * 0.35;
   }
@@ -150,26 +150,54 @@ function showDemo() {
     showTax("output-tax", noTax);
   } else {
     showTax("output-tax", PayTax);
-    document.getElementById("output-tax").innerHTML += ` ${x.toLocaleString()} Đồng `
+    document.getElementById(
+      "output-tax"
+    ).innerHTML += ` ${x.toLocaleString()} Đồng `;
   }
-
 }
-
 
 //  Tính Tiền Cáp
 
 function changeSelection() {
-  let InputCustomer = document.getElementById("typeCustomer").value
+  let InputCustomer = document.getElementById("typeCustomer").value;
 
   if (InputCustomer === "business") {
-    document.getElementById("input-connect").style.display = "block"
-  }else{
-    document.getElementById("input-connect").style.display = "none"
+    document.getElementById("input-connect").style.display = "block";
+  } else {
+    document.getElementById("input-connect").style.display = "none";
   }
-  
 }
 
-function  calInter() {
-  
-  g
+function calInter(p1, p2, p3) {
+  let numbInterS = 1;
+  numbInterS = +document.getElementById("enterConnect").value;
+  let numbInterV = +document.getElementById("enterVip").value;
+  let internet = 0;
+
+  if (numbInterS > 10) {
+    internet = p1 + p2 + p3 * numbInterV + (numbInterS - 10) * 5;
+  } else {
+    internet = p1 + p2 + p3 * numbInterV;
+  }
+  return internet;
+}
+
+function resultInter() {
+  let InputCustomer = document.getElementById("typeCustomer").value;
+  let showInter = "";
+
+  if (InputCustomer === "business") {
+    showInter = calInter(15, 75, 50);
+  } else {
+    showInter = calInter(4.5, 20.5, 7.5);
+  }
+
+  showTax("output-Inter", codeCust);
+  return (document.getElementById(
+    "output-Inter"
+  ).innerHTML += ` phải đóng số tiền là ${showInter}$`);
+}
+
+function codeCust() {
+  return document.getElementById("input-code").value;
 }

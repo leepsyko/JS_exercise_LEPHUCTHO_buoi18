@@ -159,6 +159,8 @@
 
     <div class="form-control w-75 mx-auto d-grid mt-5 ">
       <h1 class="text-center"> Truy Thu Thuế Thu Nhập Cá Nhân</h1>
+      <label for="input-code">Nhập Mã Khách Hàng</label>
+      <input type="text" name="" id="input-code">
       <label for="typeCustomer"> Chọn loại khách hàng</label>
       <select name="" id="typeCustomer" onchange="changeSelection()">
         <option value=""></option>
@@ -166,16 +168,16 @@
         <option value="person">Cá Nhân</option>
       </select>
       <div id="input-connect" style="display: none;">
-        <label for="enterConnect"> Nhập Số kết nói</label>
+        <label for="enterConnect"> Nhập Số kết nối</label>
         <input type="number" id="enterConnect" class="d-block">
       </div>
       <label for="enterVip">Số Kênh Cao Cấp</label>
       <input type="number" name="" id="enterVip">
-      <button class="btn btn-primary d-block my-2" onclick="showDemo()"> Số
+      <button class="btn btn-primary d-block my-2" onclick="resultInter()"> Số
         tiền phải trả</button>
       <div class="ps-2 border m-2">
-        <h4>Tiền Phải Trả</h4>
-        <div id="output-tax"></div>
+        <h4>Mã khách hàng</h4>
+        <div id="output-Inter"></div>
 
       </div>
     </div>
